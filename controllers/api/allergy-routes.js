@@ -15,7 +15,7 @@ router.post('/allergies', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-  });
+});
   
 // Route for updating a child's allergy
 router.put('/allergies/:id', withAuth, async (req, res) => {
@@ -29,7 +29,7 @@ router.put('/allergies/:id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-  });
+});
   
 // Route for deleting a child's allergy
 router.delete('/allergies/:id', withAuth, async (req, res) => {
@@ -39,7 +39,7 @@ router.delete('/allergies/:id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-  });
+});
   
-  module.exports = router;
+module.exports = router;
  
