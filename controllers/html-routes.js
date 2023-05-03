@@ -46,7 +46,9 @@ router.get('/child/:id', withAuth, async (req, res) => {
             include: [
             {
                 model: Allergy,
-                through: { attributes: [] },
+                    // optional through property that specifies any additional attributes to include on the join table that links the two models together.
+                    // could create a separate model for Severity, and then establish a many-to-many relationship between Child and Severity through a join table, similar to how the Child and Allergy models are related. This would allow you to store multiple severities for a child's allergies,
+                // through: { attributes: ['severity'] },
             },
             ]
         });
