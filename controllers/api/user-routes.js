@@ -6,6 +6,7 @@ const User = require('./models/User');
 const withAuth = require('../../utils/auth');
 
 // Define a route that handles a POST request to /api/users
+// Test this in Insomnia with: POST http://localhost:3001/api/users
 router.post('/', async (req, res) => {
     try {
         //Create a new user in the database using the data sent in the request body
@@ -30,6 +31,7 @@ router.post('/', async (req, res) => {
 });
 
 // Define a route that handles a POST request to /api/users/login
+// Test this in Insomnia with: POST http://localhost:3001/api/users/login
 router.post('/login', async (req, res) => {
     try {
       // Find a user in the database with the email sent in the request body
@@ -70,6 +72,7 @@ req.session.save(() => {
 });
 
 // Define a route that handles a POST request to /api/users/logout
+// Test this in Insomnia with: POST http://localhost:3001/api/users/logout
 router.post('/logout', withAuth, (req, res) => {
     // If the user is logged in
     if (req.session.logged_in) {
