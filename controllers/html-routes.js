@@ -21,3 +21,17 @@ router.get('/login', (req, res) => {
     res.render('login', { layout: 'main' });
 });
 
+// Route for dashboard
+router.get('/dashboard', withAuth, async (req, res) => {
+    try {
+      const user = await User.findByPk(req.session.user_id, {
+        include: [{ model: Child }],
+      });
+      // Serialize the data so the template can read it
+      const children = user.children.map((child) => child.get({ plain: true }));
+  
+      res.render('children', { layout: 'main', children, loggedIn: true });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
