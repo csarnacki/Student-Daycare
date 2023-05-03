@@ -1,0 +1,24 @@
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transformImg{
+    transform: translateY(-70%);
+}
+.transformName{
+    transform: translateY(350%);
+}
+.height{ 
+    height: 250px;
+    width: 100%;
+}
+.gradientText{
+    font-size: 72px;
+  background: -webkit-linear-gradient(#d272ff, #e0ff2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
