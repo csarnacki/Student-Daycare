@@ -9,8 +9,10 @@ const withAuth = require('../utils/auth');
 // GET route for the home page
 // Test this in web browser: http://localhost:3001/
 router.get('/', async (req, res) => {
-  res.redirect('/dashbaord');
-  res.render('homepage');
+    if (req.session.logged_in) {
+        res.redirect('/dashboard')
+    }
+  res.redirect('/homepage');
 });
 
 // GET route for the login page
