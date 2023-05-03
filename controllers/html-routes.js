@@ -2,36 +2,22 @@
 
 // Import the necessary libraries and middleware
 const router = require('express').Router();
-// Require the 'path' module to work with file and directory paths
-const path = require('path');
+const { Child, Allergy } = require('../models');
 const withAuth = require('../utils/auth');
 
-// GET route for the home page
-// Test this in web browser: http://localhost:3001/
-router.get('/', async (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/dashboard')
-    }
-  res.redirect('/homepage');
+// Route for homepage
+// Test in web browser: http://localhost:3001/
+router.get('/', (req, res) => {
+    res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
 });
 
-// GET route for the login page
-// If the user is already logged in, redirect to the profile page
-// Test this in web browser: http://localhost:3001/login
+// Route for login page
+// Test in web browser: http://localhost:3001/login
 router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
-  res.render('login');
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
+    res.render('login', { layout: 'main' });
 });
-
-// GET route for the profile page
-// If the user is not logged in, redirect to the login page
-// Test this in web browser: http://localhost:3001/profile
-router.get('/profile', withAuth, async (req, res) => {
-  res.render('profile');
-});
-
-module.exports = router;
 

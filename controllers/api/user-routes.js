@@ -78,15 +78,15 @@ router.post('/login', async (req, res) => {
 router.post('/logout', withAuth, (req, res) => {
     // If the user is logged in
     if (req.session.logged_in) {
-      // Destroy the session and respond with a status code of 204 (No Content)
-      req.session.destroy(() => {
+        // Destroy the session and respond with a status code of 204 (No Content)
+        req.session.destroy(() => {
         res.status(204).end();
-      });
+    });
     } else {
       // If the user is not logged in, respond with a status code of 404 (Not Found)
       res.status(404).end();
     }
-  });
+});
 
 // Export the router so it can be used by the rest of our application
 module.exports = router;
