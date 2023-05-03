@@ -6,6 +6,7 @@ router.post('/', async (req, res) => {
     try {
         const newChild = await Child.create({
             //Child class attributes go in here
+            ...req.body
         });
 
         res.status(200).json(newChild);
@@ -20,6 +21,7 @@ router.delete('/:id', async (req, res) => {
         const childData = await Child.destroy({
             //Child class attributes go in here
             where: {
+                id: req.params.id,
         },
     });
 
