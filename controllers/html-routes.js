@@ -22,6 +22,7 @@ router.get('/login', (req, res) => {
 });
 
 // Route for dashboard
+// Test in web browser:  http://localhost:3001/dashboard
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
       const user = await User.findByPk(req.session.user_id, {
@@ -34,4 +35,27 @@ router.get('/dashboard', withAuth, async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
+
+// Route to view child's profile after select name in dashboard
+// Test in web browser: http://localhost:3001/child/{child_id}
+router.get('/child/:id', withAuth, async (req, res) => {
+    try {
+        const child = await Child.findByPk(req.params.id, {
+            include: [
+            {
+                model: Allergy,
+                through: { attributes: [] },
+            },
+            ],
+        });
+  
+        const childPlain = child.get({ plain: true });
+        childPlain.allergies = childPlain.allergies.map((allergy) => allergy.name);
+  
+        res.render('child', { layout: 'main', child: childPlain, loggedIn: true });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
