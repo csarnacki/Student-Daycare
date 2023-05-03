@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/csarnacki/Student-Daycare#readme",
   "dependencies": {
+    "bulma": "^0.9.4",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
