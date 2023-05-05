@@ -6,13 +6,13 @@ const { Child, Allergy } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Route for homepage
-// Test in web browser: http://localhost:3001/
+// Test in web browser: http://localhost:3306/
 router.get('/', (req, res) => {
     res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
 });
 
 // Route for login page
-// Test in web browser: http://localhost:3001/login
+// Test in web browser: http://localhost:3306/login
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/children');
@@ -22,7 +22,7 @@ router.get('/login', (req, res) => {
 });
 
 // Route for dashboard (handled by children.handlebars)
-// Test in web browser:  http://localhost:3001/dashboard
+// Test in web browser:  http://localhost:3306/children
 router.get('/children', withAuth, async (req, res) => {
     try {
         //// findByPk =Sequelize method used to find a record by its primary key.
@@ -39,7 +39,7 @@ router.get('/children', withAuth, async (req, res) => {
 });
 
 // Route to view child's profile after select name in dashboard 
-// Test in web browser: http://localhost:3001/child/{child_id}
+// Test in web browser: http://localhost:3306/child/:id
 router.get('/child/:id', withAuth, async (req, res) => {
     try {
         const child = await Child.findByPk(req.params.id, {
