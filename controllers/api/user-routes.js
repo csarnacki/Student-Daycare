@@ -6,7 +6,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Define a route that handles a POST request to /api/users
-// Test this in Insomnia with: POST http://localhost:3001/api/users
+// Test this in Insomnia with: POST http://localhost:3306/api/users
 router.post('/', async (req, res) => {
     try {
         //Create a new user in the database using the data sent in the request body
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 });
 
 // Define a route that handles a POST request to /api/users/login
-// Test this in Insomnia with: POST http://localhost:3001/api/users/login
+// Test this in Insomnia with: POST http://localhost:3306/api/users/login
 // Don't want to redirect the user to the login page if they are already trying to log in. Therefore, we don't need the withAuth middleware on the login route. 
 router.post('/login', async (req, res) => {
   try {
@@ -73,7 +73,7 @@ router.post('/login', async (req, res) => {
 });
 
 // Define a route that handles a POST request to /api/users/logout
-// Test this in Insomnia with: POST http://localhost:3001/api/users/logout
+// Test this in Insomnia with: POST http://localhost:3306/api/users/logout
 // withAuth middleware = for route that require the user to be logged in already.
 router.post('/logout', withAuth, (req, res) => {
     // If the user is logged in
