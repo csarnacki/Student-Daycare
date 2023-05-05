@@ -39,5 +39,7 @@ ChildAllergy.init(
     }
 );
 
+module.exports = ChildAllergy;
+
         
  
