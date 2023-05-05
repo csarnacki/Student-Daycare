@@ -1,0 +1,15 @@
+<!-- students.handlebars -->
+
+{{#each students}}
+  <div class="student">
+    <h2>{{name}}</h2>
+    <p>Grade: {{grade}}</p>
+    <p>Teacher: {{teacher.name}}</p>
+    <ul>
+      {{#each allergies}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+    <p>Last updated: {{formatDate updated_on}} by {{updatedBy.name}}</p>
+  </div>
+{{/each}}
