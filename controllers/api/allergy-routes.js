@@ -4,8 +4,10 @@ const { Child, Allergy } = require('../../models');
 // Import our custom authentication middleware
 const withAuth = require('/utils/auth');
 
+//Add
+
 // Route for adding a child's allergy
-// Test in Insomnia: POST http://localhost:3001/api/allergies
+// Test in Insomnia: POST http://localhost:3306/api/allergies
 router.post('/api/allergies', withAuth, async (req, res) => {
     try {
         const { allergy_name, child_id } = req.body;
@@ -19,7 +21,7 @@ router.post('/api/allergies', withAuth, async (req, res) => {
 });
   
 // Route for updating a child's allergy
-// Test in Insomnia: PUT http://localhost:3001/api/allergies/:id
+// Test in Insomnia: PUT http://localhost:3306/api/allergies/:id
 router.put('/api/allergies/:id', withAuth, async (req, res) => {
     try {
         const { allergy_name } = req.body;
@@ -34,7 +36,7 @@ router.put('/api/allergies/:id', withAuth, async (req, res) => {
 });
   
 // Route for deleting a child's allergy
-// Test in Insomnia: DELETE http://localhost:3001/api/allergies/:id
+// Test in Insomnia: DELETE http://localhost:3306/api/allergies/:id
 router.delete('/api/allergies/:id', withAuth, async (req, res) => {
     try {
         const deletedAllergy = await Allergy.destroy({ where: { id: req.params.id } });
