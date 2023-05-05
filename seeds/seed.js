@@ -9,15 +9,15 @@ const allergyData = require('./allergyData.json');
 const seedDatabase = async () => {
     await sequelize.sync({ force: true});
 
-    await User.create(userData, {
+    await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true,
     }),
-    await Child.create(childData, {
+    await Child.bulkCreate(childData, {
         individualHooks: true,
         returning: true,
     }),
-    await Allergy.create(allergyData, {
+    await Allergy.bulkCreate(allergyData, {
         individualHooks: true,
         returning: true,
     });
