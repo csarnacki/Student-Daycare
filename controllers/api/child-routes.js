@@ -2,6 +2,8 @@ const router = require('express').Router();
 //Class name of Child gets imported here
 const { Child } = require('../../models');
 
+// Route for adding a child profile
+// Test in Insomnia: POST http://localhost:3306/api/child
 router.post('/', async (req, res) => {
     try {
         const newChild = await Child.create({
@@ -15,6 +17,8 @@ router.post('/', async (req, res) => {
     }
 });
 
+// Route for deleting a child
+// Test in Insomnia: DELETE http://localhost:3306/api/child
 router.delete('/:id', async (req, res) => {
     try {
         //Class name of Child goes here
