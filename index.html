@@ -1,49 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" class="has-background-info-dark">
+<html lang="en" class="has has-background-info-dark">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student DayCare</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child List</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
 </head>
-<body>
-<header>
+<!-- Nav Bar -->
+  <header>
+    <div class="navbar is-white p-5 ">
+      
+      <div class="">
+          <button class="button is-info" id="homeBtn">Home</button>
+          <button class="button" id="childListBtn">Child List</button>
+          <button class="button" id="addChildBtn">Add Child</button>
+      </div>
+        <div class="navbar-end">
+          <button class="button is-danger is-outlined" id="signOutBtn">Sign Out</button>
+        </div>
+  </div>
 </header>
 
-<div class="centered  has-text-black transformName is-size-1 gradientText">
-<h1>School name</h1>
-</div>
-<div class="centered">
-<form class="is-rounded box m-6 column is-one-third height">
-    <div class="field">
-      <label class="label">User Name</label>
-      <div class="control">
-        <input class="input column is-6" type="text" placeholder="">
-      </div>
-    </div>
-  
-    <div class="field ">
-      <label class="label">Password</label>
-      <div class="control">
-        <input class="input column is-6" type="password" placeholder="********">
-      </div>
-      <div class="is-pulled-right transformImg">
-        <img src="img/Daycare_logo.jpg" alt="Cartoon children playing">
-      </div>
-      <button class=" my-3 button is-info">Sign in</button>
-    </div>
-</div>
-  
-  </form>
+    <!-- "Children List" label -->
+   <div class="is-size-3 has-text-black pl-3">
+    <label><b>Children List</b></label>
 
-</div>
-</form>
-
-
-
+   </div>
     
-</body>
+
+
+    <!-- ELements for child name and dropdown with allergies -->
+    <div class="has-text-black has-background-white p-3" id="allergiesList">
+      <!-- This will be our template for the JavaScript to generate the profile information and page v -->
+      <div>
+        <!-- Drop down with names and allergies -->
+      
+      <details>
+        <summary class="is-size-3"><b>Crites, Brandon</b></summary>
+        <div>
+          <img src="img/ProfilePic.png">
+        </div>
+        <!-- Allergies list -->
+        <h2><b>Allergies:</b> 
+        <li>Peanut Butter</li>
+        <li>Pollen</li>
+        <li>Latex</li>
+      </h2>
+      <div class="transformRight">
+        <!-- Profile button -->
+      <button class="button" id="profileBtn">Profile</button>
+      <!-- Edit button -->
+      <button id="editBtn" class="button is-info">Edit</button>
+    </div>
+      </details>
+    </div>
+    <!-- ^ It ends here -->
+    </div>
+  </body>
+
+  
+
 </html>
