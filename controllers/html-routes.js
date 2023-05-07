@@ -2,7 +2,7 @@
 
 // Import the necessary libraries and middleware
 const router = require('express').Router();
-const { Child, Allergy, ChildAllergy } = require('../models');
+const { Child, Allergy, ChildAllergy, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Route for homepage
@@ -15,7 +15,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
       //
-      const childData = await Child.findAll({
+      const childData = await ChildAllergy.findAll({
         // include: [
         //   {
         //     model: Allergy,
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
         //   },
         // ],
       });
-// res.json(childData)
+res.json(childData)
       // res.render('children', { childData });
   
     } catch (err) {
