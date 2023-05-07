@@ -1,6 +1,7 @@
 const User = require('./user');
 const Child = require('./child');
 const Allergy = require('./allergy');
+const ChildAllergy = require('./child_allergy');
 
 User.hasMany(Child, {
     foreignKey: 'user_id',
@@ -23,7 +24,7 @@ Child.hasMany(Allergy, {
 });
 
 
-module.exports = { User, Child, Allergy };
+module.exports = { User, Child, Allergy, ChildAllergy };
 
 
 
