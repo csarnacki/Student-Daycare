@@ -2,14 +2,35 @@
 
 // Import the necessary libraries and middleware
 const router = require('express').Router();
-const { Child, Allergy } = require('../models');
+const { Child, Allergy, ChildAllergy, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Route for homepage
 // Test in web browser: http://localhost:3306/
-router.get('/', (req, res) => {
-    res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
-});
+// router.get('/', (req, res) => {
+//     res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
+// });
+
+
+router.get('/', async (req, res) => {
+    try {
+      //
+      const childData = await ChildAllergy.findAll({
+        // include: [
+        //   {
+        //     model: Allergy,
+        //     attributes: ['name'],
+        //   },
+        // ],
+      });
+res.json(childData)
+      // res.render('children', { childData });
+  
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
 
 // Route for login page
 // Test in web browser: http://localhost:3306/login
@@ -64,3 +85,5 @@ router.get('/child/:id', withAuth, async (req, res) => {
     }
 });
 
+
+module.exports = router;
