@@ -1,0 +1,5 @@
+<ul>
+  {{#each data}}
+    <li><a href="/child/{{this.child.id}}">{{this.child.name}}</a> is allergic to {{this.allergy.name}}</li>
+  {{/each}}
+</ul>

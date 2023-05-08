@@ -6,10 +6,10 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/homepage">Home</a> |
+        <a href="../homepage.handlebars">Home</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="../login.handlebars">login</a>
         {{/if}}
       </nav>
     </header>
