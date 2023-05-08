@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const { Child, Allergy } = require('../../models');
 // Import our custom authentication middleware
-const withAuth = require('/utils/auth');
+const withAuth = require('../../utils/auth');
 
 
 // Route for adding a child's allergy
