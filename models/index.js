@@ -1,29 +1,29 @@
-const user = require('./user');
-const child = require('./child');
-const allergy = require('./allergy');
+const User = require('./user');
+const Child = require('./child');
+const Allergy = require('./allergy');
 
-user.hasMany(child, {
+User.hasMany(Child, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-child.belongsTo(user, {
+Child.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 
-allergy.belongsTo(child, {
+Allergy.belongsTo(Child, {
     foreignKey: 'child_id',
     onDelete: 'CASCADE'
 });
 
-child.hasMany(allergy, {
+Child.hasMany(Allergy, {
     foreignKey: 'child_id',
     onDelete: 'CASCADE'
 });
 
 
-module.exports = { user, child, allergy };
+module.exports = { User, Child, Allergy };
 
 
 
