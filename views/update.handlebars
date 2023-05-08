@@ -1,13 +1,79 @@
-<div class="col-md-6">
-    <h2>Update</h2>
+<!DOCTYPE html>
+<html lang="en" class="has has-background-info-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Page</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+</head>
+<!-- Nav Bar -->
 
-    <form class="form login-form">
-        <div class="form-group">
-            <label for="update">Restriction:</label>
-            <input class="form-input" type="text" id="update" />
+  <header>
+    <div class="navbar is-white p-5 ">
+      
+      <div class="">
+          <button class="button is-info" id="homeBtn">Home</button>
+          <button class="button" id="childListBtn">Child List</button>
+          <button class="button" id="addChildBtn">Add Child</button>
+      </div>
+        <div class="navbar-end">
+          <button class="button is-danger is-outlined" id="signOutBtn">Sign Out</button>
         </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-    </form>
+  </div>
+</header>
+<body>
+  <div class="has-text-black m-2 is-size-3">
+  <p><b>Update</b></p>
 </div>
+<div class="has-background-white is-size-5">
+  <div class="p-4">
+  <img src="img/ProfilePic.png">
+  <p><b>Crites, Brandon</b></p>
+  <!-- Age Update -->
+  <div class="">
+  <p><b>Age</b>: <input type="number" min="5" max="10"></p>
+</div>
+<!-- Teacher selection -->
+  <p><b>Teacher</b>:</p>
+  <div class="is-size-6">
+    <fieldset>
+  <!-- Teacher 1 -->
+      <div>
+        <input type="radio" id="teacher1" name="teacher" value="teacher1" checked>
+        <label for="teacher1">Teacher 1</label>
+      </div>
+  <!-- Teacher 2 -->
+      <div>
+        <input type="radio" id="teacher2" name="teacher" value="teacher2">
+        <label for="teacher2">Teacher 2</label>
+      </div>
+  <!-- Teacher 3 -->
+      <div>
+        <input type="radio" id="teacher3" name="teacher" value="teacher3">
+        <label for="teacher3">Teacher 3</label>
+      </div>
+  </fieldset>
+</div>
+<!-- Restrictions update -->
+<div class="" id="updateRestrictions">
+<p><b>Restrictions</b>:</p>
+<label class="is-size-5">Add a restriction:</label>
+<input type="text" id="restrictionsInput">
+<button class="button">Add</button>
+</div>
+<!-- Allergies update -->
+<div class="" id="updateAllergies">
+  <p><b>Allergies</b>:</p>
+  <label class="is-size-5">Add an allergy:</label>
+  <input type="text" id="allergyInput">
+  <button class="button">Add</button>
+  </div>
+</div>
+<div class="level-right">
+  <button class="button is-info m-3">Done</button>
+</div>
+</div>
+</body>
+</html>
