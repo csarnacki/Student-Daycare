@@ -14,6 +14,9 @@
     height: 250px;
     width: 100%;
 }
+.transformRight{
+    transform: translateX(91%);
+}
 .gradientText{
     font-size: 72px;
   background: -webkit-linear-gradient(#d272ff, #e0ff2f);
@@ -21,4 +24,10 @@
   -webkit-text-fill-color: transparent;
 
 
+}
+summary:hover{
+    cursor: pointer;
+    background-color: grey;
+    transition: ease-in-out .33s;
+    
 }

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/csarnacki/Student-Daycare#readme",
   "dependencies": {
     "bulma": "^0.9.4",
+
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
