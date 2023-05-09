@@ -77,10 +77,10 @@ Example of testing a route in Insomnia:
 ![plot](./insomnia-test-example.png)
 
     To access the Github Repository visit:
-       https://github.com/CarolinaRaIs/shop-here-orm-e-commerce-backend
+    https://github.com/csarnacki/Student-Daycare   
 
     To access the deployed site visit:
-        https://carolinarais.github.io/shop-here-orm-e-commerce-backend/ 
+        
 
 ## [License:](#license:)
 
