@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="has-background-info-dark">
 <head>
@@ -6,50 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student DayCare</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="style.css">
+    
     
 </head>
 <body>
-<header>
-</header>
 
-<div class="row">
-    <div class="col-md-6">
+
+<div class="centered  has-text-black transformName is-size-1 gradientText">
+<h1>School name</h1>
+</div>
+<div class="centered">
+    <div class="level-left">
         <h2>Login</h2>
-
-        <form class="form login-form">
-            <div class="form-group">
-                <label for="email-login">email:</label>
-                <input class="form-input" type="text" id="email-login" />
-            </div>
-            <div class="form-group">
-                <label for="password-login">password:</label>
-                <input class="form-input" type="password" id="password-login" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
-            </div>
-        </form>
     </div>
-    <div class="col-md-6">
-        <h2>Signup</h2>
 
-        <form class="form signup-form">
-            <div class="form-group">
-                <label for="name-signup">name:</label>
+        <form class="is-rounded box m-6 column is-one-third height">
+            <div class="field">
+                <label class="label" for="email-login">Email:</label>
+                <div class="control">
+                    <input class="input column is-6" type="text" id="email-login" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="password-login">Password:</label>
+                <div class="control">
+                    <input class="input column is-6" type="password" id="password-login" />
+                </div>
+            </div>
+           <div class="is-pulled-right transformImg">
+        <img src="img/Daycare_logo.jpg" alt="Cartoon children playing">
+            </div>
+                <button class="my-3 button is-info" type="submit">login</button>
+        </form>
+        <div class="level-left">
+        
+        <h2>Signup</h2>
+        </div>
+    <div class="centered">
+
+        <form class="is-rounded box m-6 column is-one-third height">
+            <div class="field">
+                <label class="label" for="name-signup">Name:</label>
+                <div>
                 <input class="form-input" type="text" id="name-signup" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email-signup">email:</label>
+            <div class="field">
+                <label class="label" for="email-signup">Email:</label>
+                <div>
                 <input class="form-input" type="text" id="email-signup" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="password-signup">password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
+            <div class="field">
+                
+                <label class="label" for="password-signup">Password:</label>
+                <div class="control">
+                <input class="input column is-6" type="password" id="password-signup" />
+                </div>
+            
+                <button class="my-3 button is-info" type="submit">Signup</button>
+            
             </div>
         </form>
     </div>
