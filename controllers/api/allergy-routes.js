@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 
 // Route for adding a child's allergy
 // Test in Insomnia: POST http://localhost:3306/api/allergy
-router.post('/api/allergy', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const { allergy_name, child_id } = req.body;
         const newAllergy = await Allergy.create({ name: allergy_name });
@@ -21,7 +21,7 @@ router.post('/api/allergy', withAuth, async (req, res) => {
   
 // Route for updating a child's allergy
 // Test in Insomnia: PUT http://localhost:3306/api/allergy/:id
-router.put('/api/allergy/:id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
         const { allergy_name } = req.body;
         const updatedAllergy = await Allergy.update(
@@ -36,7 +36,7 @@ router.put('/api/allergy/:id', withAuth, async (req, res) => {
   
 // Route for deleting a child's allergy
 // Test in Insomnia: DELETE http://localhost:3306/api/allergy/:id
-router.delete('/api/allergy/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const deletedAllergy = await Allergy.destroy({ where: { id: req.params.id } });
         res.status(200).json(deletedAllergy);
