@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 console.log(response.name);
     if (response.ok) {
-      document.location.replace('/test_children');
+      document.location.replace('/text_children');
     } else {
       alert(response.statusText);
     }
