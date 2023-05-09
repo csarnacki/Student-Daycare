@@ -4,3 +4,38 @@
   {{/each}}
 </ul>
 
+<div class="col-md-6">
+  <h2>Add Student</h2>
+  <form class="form signup-form">
+      <div class="form-group">
+        <label for="child-name-signup">Student name:</label>
+        {{! childName[]= allows for multiple values to be submitted in an array to the server}}
+          <input class="form-input" type="text" id="childName[]" />
+      </div>
+
+       <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add</button>
+      </div>
+
+  </form>
+  <button id="add-child" class="btn btn-primary">Add Another Student</button>
+</div>
+
+<script>
+  const addChildButton = document.getElementById('add-child');
+  const childNamesDiv = document.getElementById('child-names');
+
+  addChildButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const newChildInput = document.createElement('div');
+    newChildInput.innerHTML = `
+      <div class="form-group">
+        <label for="child-name-signup">Student name:</label>
+        <input class="form-input" type="text" name="childName[]" />
+      </div>
+    `;
+
+    childNamesDiv.appendChild(newChildInput);
+  });
+</script>
