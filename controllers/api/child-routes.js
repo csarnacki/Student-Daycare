@@ -2,6 +2,9 @@ const router = require('express').Router();
 //Class name of Child gets imported here
 const { Child } = require('../../models');
 
+
+
+
 // Route for adding a child profile
 // Test in Insomnia: POST http://localhost:3306/api/child
 router.post('/', async (req, res) => {
