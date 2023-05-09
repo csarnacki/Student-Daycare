@@ -9,9 +9,10 @@ const withAuth = require("../../utils/auth");
 // Test this in Insomnia with: POST http://localhost:3306/api/users
 router.post("/", async (req, res) => {
   try {
+    console.log(req.body);
     //Create a new user in the database using the data sent in the request body
     const userData = await User.create({
-      username: req.body.username,
+      username: req.body.name,
       email: req.body.email,
       password: req.body.password,
     });
@@ -20,15 +21,17 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       //storing the logged-in user's ID in the session.
       //userData.id = the ID of the user who just logged in
-    //   req.session.user_id = userData.id;
+      req.session.user_id = userData.id;
       //check whether the user is logged in or not
       // If req.session.logged_in is true, then the user is logged in
       req.session.logged_in = true;
 
       // Respond with the user's data and a status code of 200 (OK)
-      res.status(200).json(userData);
+      
     });
+    res.status(200).json(userData);
   } catch (err) {
+    console.log(err);
     // If there was an error, respond with the error and a status code of 400 (Bad Request)
     res.status(400).json(err);
   }
