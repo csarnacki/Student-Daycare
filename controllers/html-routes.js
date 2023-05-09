@@ -7,11 +7,11 @@ const withAuth = require("../utils/auth");
 
 // Route for homepage
 // Test in web browser: http://localhost:3306/
-// router.get('/', (req, res) => {
-//     res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
-// });
+router.get('/', (req, res) => {
+    res.render('homepage', { layout: 'main', loggedIn: req.session.logged_in });
+});
 
-router.get("/", async (req, res) => {
+router.get("/test_children", async (req, res) => {
   try {
     //
     const childData = await ChildAllergy.findAll({
@@ -65,7 +65,7 @@ router.get("/child/:id", async (req, res) => {
 // Test in web browser: http://localhost:3306/login
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/children");
+    res.redirect("/test_children");
     return;
   }
   res.render("login", { layout: "main" });
