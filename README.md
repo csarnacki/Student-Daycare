@@ -69,9 +69,8 @@
     
     * Start the server $ npm start
 
-    * 
+    * Open your web browser and navigate to http://localhost:3306/login to access the app.
     
-    * When done testing you can stop the application by pressing CTRL + C in your terminal.
 
 Example of testing a route in Insomnia:
 ![plot](./insomnia-test-example.png)
