@@ -19,7 +19,7 @@
 
     Prior to using the application:
 
-    * clone the repository and install the required dependencies with npm install or npm i
+    * Clone the repository and install the required dependencies with npm install or npm i
 
         These are the dependencies you should:
         * Node.js:
@@ -72,8 +72,8 @@
     * Open your web browser and navigate to http://localhost:3306/login to access the app.
     
 
-Example of testing a route in Insomnia:
-![plot](./insomnia-test-example.png)
+Example of login landing page:
+![plot](./login-demo-student-allergy-care.png)
 
     To access the Github Repository visit:
     https://github.com/csarnacki/Student-Daycare   
