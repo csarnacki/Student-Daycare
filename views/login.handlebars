@@ -8,61 +8,36 @@
     <link rel="stylesheet" href="style.css">
     {{!<link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">}}
     
+
 </head>
 <body>
-<header>
-</header>
+
 
 <div class="centered  has-text-black transformName is-size-1 gradientText">
-<h1>School name</h1>
+<h1>Horizon Montessori</h1>
 </div>
-<div class="row">
-<div class="col-md-6">
-        <h2>Login</h2>
-
-        <form class="form login-form">
-            <div class="form-group">
-                <label for="email-login">email:</label>
-                <input class="form-input" type="text" id="email-login" />
-            </div>
-            <div class="form-group">
-                <label for="password-login">password:</label>
-                <input class="form-input" type="password" id="password-login" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
-            </div>
-        </form>
-    </div>
-      <div class="is-pulled-right transformImg">
-        <img src="img/daycare_logo.png" alt="Cartoon children playing" style="float: right">
+<div class="centered">
+<form class="is-rounded box m-6 column is-one-third height">
+    <div class="field">
+      <label class="label">User Name</label>
+      <div class="control">
+        <input class="input column is-6" type="text" placeholder="">
       </div>
-       <div class="col-md-6">
-        <h2>Signup</h2>
-
-        <form class="form signup-form">
-            <div class="form-group">
-                <label for="name-signup">name:</label>
-                <input class="form-input" type="text" id="name-signup" />
-            </div>
-            <div class="form-group">
-                <label for="email-signup">email:</label>
-                <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-                <label for="password-signup">password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
-            </div>
-        </form>
     </div>
-    </div> 
-    
-
   
+    <div class="field ">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input column is-6" type="password" placeholder="********">
+      </div>
+      <div class="is-pulled-right transformImg">
+        <img src="img/Daycare_logo.jpg" alt="Cartoon children playing">
+      </div>
+      <button class=" my-3 button is-info">Sign in</button>
+    </div>
+</div>
   
+  </form>
 
 </div>
 </form>
@@ -72,5 +47,3 @@
     
 </body>
 </html>
-
-<script src="./js/login.js"></script>
