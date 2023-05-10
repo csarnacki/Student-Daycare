@@ -1,4 +1,5 @@
-@import 'bulma/css/bulma.css'
+@import 'bulma/css/bulma.css';
+
 .centered{
     display: flex;
     justify-content: center;
