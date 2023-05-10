@@ -1,4 +1,4 @@
-
+@import 'bulma/css/bulma.css'
 .centered{
     display: flex;
     justify-content: center;
@@ -30,4 +30,8 @@ summary:hover{
     background-color: grey;
     transition: ease-in-out .33s;
     
+}
+
+body{
+    background-color: rgb(162, 193, 245);
 }
