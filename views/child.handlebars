@@ -1,0 +1,78 @@
+<!-- students.handlebars -->
+
+{{#each students}}
+  <div class="student">
+    <h2>{{name}}</h2>
+    <p>Grade: {{grade}}</p>
+    <p>Teacher: {{teacher.name}}</p>
+    <ul>
+      {{#each allergies}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+    <p>Last updated: {{formatDate updated_on}} by {{updatedBy.name}}</p>
+  </div>
+{{/each}}
+{{!-- <!DOCTYPE html>
+<html lang="en" class="has has-background-info-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child List</title>
+  {{#each css}}
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+  {{/each}}
+</head>
+<!-- Nav Bar -->
+
+  <header>
+    <div class="navbar is-white p-5 ">
+      
+      <div class="">
+          <button class="button is-info" id="homeBtn">Home</button>
+          <button class="button" id="childListBtn">Child List</button>
+          <button class="button" id="addChildBtn">Add Child</button>
+      </div>
+        <div class="navbar-end">
+          <button class="button is-danger is-outlined" id="signOutBtn">Sign Out</button>
+        </div>
+  </div>
+</header>
+
+   <body>
+    <div class="has-text-black m-2 is-size-3">
+      <p>Profile</p>
+
+    </div>
+    <!-- Profile -->
+    <div class="has-background-white p-4">
+      <!-- img -->
+      <img src="profilepic.png">
+      <div class="has-text-black is-size-5 ">
+        <!-- Information -->
+      <P><b>Crites, Brandon</b></P>
+      <p><b>Teacher</b>: Teacher 2</p>
+      <p><b>Grade</b>: B </p>
+      <p><b>Restrictions</b>:
+        <li>Red meat</li>
+        <li>Pork</li>
+        <li>Eggs</li>
+      </p>
+      <p>
+        <b>Alleriges</b>:
+        <div class="is-size-6">
+        <li>Pollen</li>
+        <li>Latex</li>
+        <li>Peanut Butter</li>
+      </div>
+      </p>
+    </div>
+
+    </div>
+  </body>
+
+  
+
+</html>--}}
